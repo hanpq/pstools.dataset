@@ -1,7 +1,7 @@
 ﻿
 @{
   RootModule = 'pstools.dataset.psm1'
-  ModuleVersion = '1.2.37'
+  ModuleVersion = '1.2.39'
   CompatiblePSEditions = @('Desktop','Core')
   GUID = 'a0e2a1b6-0a1d-4a6f-bf07-ff45a1d75e20'
   Author = 'Hannes Palmquist'
@@ -10,11 +10,11 @@
   Description = 'Tools for managing a .NET system data set'
   RequiredModules = @()
   FunctionsToExport = @('Add-DataSetRelation','Add-DataSetTable','Add-DataTableColumn','Add-DataTableRow','Get-DataTableRow','New-DataSet','New-DataTable')
-  FileList = @('.\data\appicon.ico','.\data\banner.ps1','.\docs\pstools.dataset.md','.\include\module.utility.functions.ps1','.\public\Add-DataSetRelation.ps1','.\public\Add-DataSetTable.ps1','.\public\Add-DataTableColumn.ps1','.\public\Add-DataTableRow.ps1','.\public\Get-DataTableRow.ps1','.\public\New-DataSet.ps1','.\public\New-DataTable.ps1','.\settings\config.json','.\LICENSE.txt','.\pstools.dataset.psd1','.\pstools.dataset.psm1')
+  FileList = @('.\data\appicon.ico','.\data\banner.ps1','.\docs\pstools.dataset.md','.\include\module.utility.functions.ps1','.\private\.gitignore','.\public\Add-DataSetRelation.ps1','.\public\Add-DataSetTable.ps1','.\public\Add-DataTableColumn.ps1','.\public\Add-DataTableRow.ps1','.\public\Get-DataTableRow.ps1','.\public\New-DataSet.ps1','.\public\New-DataTable.ps1','.\settings\config.json','.\LICENSE.txt','.\pstools.dataset.psd1','.\pstools.dataset.psm1')
   PrivateData = @{
     ModuleName = 'pstools.dataset'
     DateCreated = '2020-10-13'
-    LastBuildDate = '2021-03-21'
+    LastBuildDate = '2021-03-22'
     PSData = @{
       Tags = @('PSEdition_Desktop','PSEdition_Core','Windows','Linux','MacOS')
       ProjectUri = 'https://getps.dev/modules/PS.Tools.DataSet/quickstart'
@@ -46,6 +46,7 @@
   CLRVersion = ''
   ProcessorArchitecture = ''
 }
+
 
 
 
