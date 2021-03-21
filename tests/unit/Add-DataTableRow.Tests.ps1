@@ -1,8 +1,8 @@
 BeforeAll {
-    . (Resolve-Path -Path "$PSScriptRoot\..\..\Source\public\Add-DataTableRow.ps1")
+    . (Resolve-Path -Path "$PSScriptRoot\..\..\source\public\Add-DataTableRow.ps1")
 }
 
-Describe -Name "Add-DataTableRow.ps1" -Fixture {
+Describe -Name 'Add-DataTableRow.ps1' -Fixture {
     BeforeEach {
         $DataTable = New-Object System.Data.Datatable
         $DataTable.TableName = 'TableName'
@@ -24,15 +24,15 @@ Describe -Name "Add-DataTableRow.ps1" -Fixture {
     }
     Context -Name 'When calling with a valid object' {
         It -Name 'Should not throw' -Test {
-            $object = [pscustomobject]@{"One" = 1;"Two" = 2;"Three" = 3}
-            {Add-DataTableRow -DataTable $DataTable -InputObject $Object} | should -not -Throw
+            $object = [pscustomobject]@{'One' = 1; 'Two' = 2; 'Three' = 3 }
+            { Add-DataTableRow -DataTable $DataTable -InputObject $Object } | Should -Not -Throw
         }
-        It -Name 'Row should have correct values' -test {
-            $object = [pscustomobject]@{"One" = 1; "Two" = 2; "Three" = 3 }
+        It -Name 'Row should have correct values' -Test {
+            $object = [pscustomobject]@{'One' = 1; 'Two' = 2; 'Three' = 3 }
             Add-DataTableRow -DataTable $DataTable -InputObject $Object
-            $DataTable.Rows[0].One | should -be 1
-            $DataTable.Rows[0].Two | should -be 2
-            $DataTable.Rows[0].Three | should -be 3
+            $DataTable.Rows[0].One | Should -Be 1
+            $DataTable.Rows[0].Two | Should -Be 2
+            $DataTable.Rows[0].Three | Should -Be 3
         }
     }
 }

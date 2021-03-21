@@ -1,5 +1,5 @@
 BeforeAll {
-    . (Resolve-Path -Path "$PSScriptRoot\..\..\Source\public\Add-DataSetTable.ps1")
+    . (Resolve-Path -Path "$PSScriptRoot\..\..\source\public\Add-DataSetTable.ps1")
 }
 
 Describe -Name "Add-DataSetTable.ps1" -Fixture {

@@ -1,8 +1,8 @@
 BeforeAll {
-    . (Resolve-Path -Path "$PSScriptRoot\..\..\Source\public\Add-DataSetRelation.ps1")
+    . (Resolve-Path -Path "$PSScriptRoot\..\..\source\public\Add-DataSetRelation.ps1")
 }
 
-Describe -Name "Add-DataSetRelation.ps1" -Fixture {
+Describe -Name 'Add-DataSetRelation.ps1' -Fixture {
     BeforeEach {
         $DataSet = New-Object -TypeName System.Data.DataSet
 
@@ -30,7 +30,7 @@ Describe -Name "Add-DataSetRelation.ps1" -Fixture {
         $DataColumn.DataType = [Object]
         [void]$OrderTable.Columns.Add($DataColumn)
 
-        [void]$CustomerTable.Rows.Add(1, "Cust1")
+        [void]$CustomerTable.Rows.Add(1, 'Cust1')
         [void]$OrderTable.Rows.Add(11111, 1)
         [void]$OrderTable.Rows.Add(22222, 1)
 
@@ -41,11 +41,11 @@ Describe -Name "Add-DataSetRelation.ps1" -Fixture {
     }
     Context -Name 'When adding a data set relation' {
         It -Name 'Should not throw' {
-            {Add-DataSetRelation `
-                -RelationName 'CustomerOrderRel' `
-                -DataSet $DataSet `
-                -ParentDataTableColumn $CustomerTable.Columns['ID'] `
-                -ChildDataTableColumn $OrderTable.Columns['CustomerID']} | should -not -Throw
+            { Add-DataSetRelation `
+                    -RelationName 'CustomerOrderRel' `
+                    -DataSet $DataSet `
+                    -ParentDataTableColumn $CustomerTable.Columns['ID'] `
+                    -ChildDataTableColumn $OrderTable.Columns['CustomerID'] } | Should -Not -Throw
         }
         It -Name 'Should not return when passthrough is not used' {
             $Relationship = Add-DataSetRelation `
@@ -53,49 +53,49 @@ Describe -Name "Add-DataSetRelation.ps1" -Fixture {
                 -DataSet $DataSet `
                 -ParentDataTableColumn $CustomerTable.Columns['ID'] `
                 -ChildDataTableColumn $OrderTable.Columns['CustomerID']
-            $Relationship | should -BeNullOrEmpty
+            $Relationship | Should -BeNullOrEmpty
         }
         It -Name 'Customer rows should return child rows' {
             $Relationship = Add-DataSetRelation `
-                    -RelationName 'CustomerOrderRel' `
-                    -DataSet $DataSet `
-                    -ParentDataTableColumn $CustomerTable.Columns['ID'] `
-                    -ChildDataTableColumn $OrderTable.Columns['CustomerID'] `
-                    -Passtrough
+                -RelationName 'CustomerOrderRel' `
+                -DataSet $DataSet `
+                -ParentDataTableColumn $CustomerTable.Columns['ID'] `
+                -ChildDataTableColumn $OrderTable.Columns['CustomerID'] `
+                -Passtrough
             $Result = $CustomerTable.Rows[0].GetChildRows($Relationship)
-            $Result | should -HaveCount 2
+            $Result | Should -HaveCount 2
         }
         It -Name 'Order rows should return parent rows' {
             $Relationship = Add-DataSetRelation `
-                    -RelationName 'CustomerOrderRel' `
-                    -DataSet $DataSet `
-                    -ParentDataTableColumn $CustomerTable.Columns['ID'] `
-                    -ChildDataTableColumn $OrderTable.Columns['CustomerID'] `
-                    -Passtrough
+                -RelationName 'CustomerOrderRel' `
+                -DataSet $DataSet `
+                -ParentDataTableColumn $CustomerTable.Columns['ID'] `
+                -ChildDataTableColumn $OrderTable.Columns['CustomerID'] `
+                -Passtrough
             $Result = $OrderTable.Rows[0].GetParentRow($Relationship)
-            $Result | should -HaveCount 1
+            $Result | Should -HaveCount 1
         }
         It -Name 'Should throw when adding duplicate relations' {
-            Mock Write-Error -MockWith {throw}
+            Mock Write-Error -MockWith { throw }
             Add-DataSetRelation `
-                    -RelationName 'CustomerOrderRel' `
-                    -DataSet $DataSet `
-                    -ParentDataTableColumn $CustomerTable.Columns['ID'] `
-                    -ChildDataTableColumn $OrderTable.Columns['CustomerID']
+                -RelationName 'CustomerOrderRel' `
+                -DataSet $DataSet `
+                -ParentDataTableColumn $CustomerTable.Columns['ID'] `
+                -ChildDataTableColumn $OrderTable.Columns['CustomerID']
             { Add-DataSetRelation `
                     -RelationName 'CustomerOrderRel' `
                     -DataSet $DataSet `
                     -ParentDataTableColumn $CustomerTable.Columns['ID'] `
-                    -ChildDataTableColumn $OrderTable.Columns['CustomerID'] } | should -throw
+                    -ChildDataTableColumn $OrderTable.Columns['CustomerID'] } | Should -Throw
         }
         It -Name 'Should return a relation object when using passthrough' {
             $Result = Add-DataSetRelation `
-                    -RelationName 'CustomerOrderRel' `
-                    -DataSet $DataSet `
-                    -ParentDataTableColumn $CustomerTable.Columns['ID'] `
-                    -ChildDataTableColumn $OrderTable.Columns['CustomerID'] `
-                    -Passtrough   
-            $Result | should -not -BeNullOrEmpty
+                -RelationName 'CustomerOrderRel' `
+                -DataSet $DataSet `
+                -ParentDataTableColumn $CustomerTable.Columns['ID'] `
+                -ChildDataTableColumn $OrderTable.Columns['CustomerID'] `
+                -Passtrough   
+            $Result | Should -Not -BeNullOrEmpty
         }
     }
 }

@@ -1,8 +1,8 @@
 BeforeAll {
-    . (Resolve-Path -Path "$PSScriptRoot\..\..\Source\public\Get-DataTableRow.ps1")
+    . (Resolve-Path -Path "$PSScriptRoot\..\..\source\public\Get-DataTableRow.ps1")
 }
 
-Describe -Name "Get-DataTableRow.ps1" -Fixture {
+Describe -Name 'Get-DataTableRow.ps1' -Fixture {
     BeforeEach {
         $DataTable = New-Object System.Data.Datatable
         $DataTable.TableName = 'TableName'
@@ -31,10 +31,10 @@ Describe -Name "Get-DataTableRow.ps1" -Fixture {
             $Result = Get-DataTableRow -DataTable $DataTable -SQLQuery '[one] = 1'
         }
         It -Name 'Should return one row' {
-            $Result | should -havecount 1
+            $Result | Should -HaveCount 1
         }
         It -Name 'Should be of type DataRow' {
-            $Result | should -beoftype [System.Data.DataRow]
+            $Result | Should -BeOfType [System.Data.DataRow]
         }
     }
     Context -Name 'When calling with a valid query and expect multi row result' {
@@ -42,10 +42,10 @@ Describe -Name "Get-DataTableRow.ps1" -Fixture {
             $Result = Get-DataTableRow -DataTable $DataTable -SQLQuery '[Three] = 3'
         }
         It -Name 'Should return two rows' {
-            $Result | should -havecount 2
+            $Result | Should -HaveCount 2
         }
         It -Name 'Each row should be of type DataRow' {
-            $Result[0] | should -beoftype [System.Data.DataRow]
+            $Result[0] | Should -BeOfType [System.Data.DataRow]
         }
     }
     Context -Name 'When calling with a valid query and expect zero results' {
@@ -53,12 +53,12 @@ Describe -Name "Get-DataTableRow.ps1" -Fixture {
             $Result = Get-DataTableRow -DataTable $DataTable -SQLQuery '[Three] = 6'
         }
         It -Name 'Should return zero rows' {
-            $Result | should -BeNullOrEmpty
+            $Result | Should -BeNullOrEmpty
         }
     }
     Context -Name 'When calling with a invalid query' {
         It -Name 'Should throw' {
-            { Get-DataTableRow -DataTable $DataTable -SQLQuery '[Three] = Foo' -ErrorAction Stop } | should -throw
+            { Get-DataTableRow -DataTable $DataTable -SQLQuery '[Three] = Foo' -ErrorAction Stop } | Should -Throw
         }
     }
 }
