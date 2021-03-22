@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Add-DataSetRelation</command:name>
+      <command:verb>Add</command:verb>
+      <command:noun>DataSetRelation</command:noun>
+      <maml:description>
+        <maml:para></maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Creates a relationship between to DataTable columns</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Add-DataSetRelation</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>DataSet</maml:name>
+          <maml:description>
+            <maml:para>Provide the DataSet object</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">DataSet</command:parameterValue>
+          <dev:type>
+            <maml:name>DataSet</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+          <maml:name>ParentDataTableColumn</maml:name>
+          <maml:description>
+            <maml:para>Provide the DataTable parent column object</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">DataColumn</command:parameterValue>
+          <dev:type>
+            <maml:name>DataColumn</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+          <maml:name>ChildDataTableColumn</maml:name>
+          <maml:description>
+            <maml:para>Provide the DataTable child column object</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">DataColumn</command:parameterValue>
+          <dev:type>
+            <maml:name>DataColumn</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
+          <maml:name>RelationName</maml:name>
+          <maml:description>
+            <maml:para>Provide a name for the relation object</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Passtrough</maml:name>
+          <maml:description>
+            <maml:para>If the passthrough parameter is specified this function will return the created relation object</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>DataSet</maml:name>
+        <maml:description>
+          <maml:para>Provide the DataSet object</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">DataSet</command:parameterValue>
+        <dev:type>
+          <maml:name>DataSet</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <maml:name>ParentDataTableColumn</maml:name>
+        <maml:description>
+          <maml:para>Provide the DataTable parent column object</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">DataColumn</command:parameterValue>
+        <dev:type>
+          <maml:name>DataColumn</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+        <maml:name>ChildDataTableColumn</maml:name>
+        <maml:description>
+          <maml:para>Provide the DataTable child column object</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">DataColumn</command:parameterValue>
+        <dev:type>
+          <maml:name>DataColumn</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
+        <maml:name>RelationName</maml:name>
+        <maml:description>
+          <maml:para>Provide a name for the relation object</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Passtrough</maml:name>
+        <maml:description>
+          <maml:para>If the passthrough parameter is specified this function will return the created relation object</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <dev:code>$CustOrderRel = Add-DataSetRelation -DataSet $DataSet -ParentDataTableColumn $CustomerTable.Columns['CustomerID'] -ChildDataTableColumn $OrderTable.Columns['OrderID'] -RelationName "Rel_CustomerID_OrderID" -PassThrough</dev:code>
+        <dev:remarks>
+          <maml:para>This command will define a relationship between the customerID column of table customertable and the orderID column of table ordertable</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Add-DataSetTable</command:name>
+      <command:verb>Add</command:verb>
+      <command:noun>DataSetTable</command:noun>
+      <maml:description>
+        <maml:para></maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Add DataTable to a DataSet</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Add-DataSetTable</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>DataSet</maml:name>
+          <maml:description>
+            <maml:para>Supply the dataset object</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">DataSet</command:parameterValue>
+          <dev:type>
+            <maml:name>DataSet</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+          <maml:name>DataTable</maml:name>
+          <maml:description>
+            <maml:para>Supply the datatable that should be added to the dataset</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">DataTable</command:parameterValue>
+          <dev:type>
+            <maml:name>DataTable</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>DataSet</maml:name>
+        <maml:description>
+          <maml:para>Supply the dataset object</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">DataSet</command:parameterValue>
+        <dev:type>
+          <maml:name>DataSet</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <maml:name>DataTable</maml:name>
+        <maml:description>
+          <maml:para>Supply the datatable that should be added to the dataset</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">DataTable</command:parameterValue>
+        <dev:type>
+          <maml:name>DataTable</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <dev:code>Add-DataSetTable -DataSet $DataSet -DataTable $DataTable</dev:code>
+        <dev:remarks>
+          <maml:para>This example shows how to add a datatable object to a dataset</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Add-DataTableColumn</command:name>
+      <command:verb>Add</command:verb>
+      <command:noun>DataTableColumn</command:noun>
+      <maml:description>
+        <maml:para></maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Add columns to data tables. Columns can be added before or after rows have been added.</maml:para>
+      <maml:para>The command operates in two modes, single column or multiple columns mode.</maml:para>
+      <maml:para>Multiple mode In multiple mode it is possible to provide a string array  of column names. This is a fast and simple way to quickly  populate a table with empty columns.</maml:para>
+      <maml:para>Single mode In single mode each call adds a single column to the table. The difference is that when single mode is used it is  possible to add caption, defaultvalue and expressions.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Add-DataTableColumn</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>DataTable</maml:name>
+          <maml:description>
+            <maml:para>Defined the DataTable that columns should be added to</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">DataTable</command:parameterValue>
+          <dev:type>
+            <maml:name>DataTable</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Names</maml:name>
+          <maml:description>
+            <maml:para>Defines the names of the columns. This is used to reference the column in the datatable.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+          <dev:type>
+            <maml:name>String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Caption</maml:name>
+          <maml:description>
+            <maml:para>Sets the caption of the column. This is used when creating table views.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>DefaultValue</maml:name>
+          <maml:description>
+            <maml:para>Sets the default value of a column. When set the cell of each row will get initialized with this default value.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Expression</maml:name>
+          <maml:description>
+            <maml:para>Sets a expression to calculate the cell value.</maml:para>
+            <maml:para>For more information about expression variables and syntax see microsoft docs https://docs.microsoft.com/en-us/dotnet/api/system.data.datacolumn.expression?view=net-5.0</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>AllowDBNull</maml:name>
+          <maml:description>
+            <maml:para>Defaults to true, if set to false column will not allow null values</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+          <dev:type>
+            <maml:name>Boolean</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>True</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>DataTable</maml:name>
+        <maml:description>
+          <maml:para>Defined the DataTable that columns should be added to</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">DataTable</command:parameterValue>
+        <dev:type>
+          <maml:name>DataTable</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Names</maml:name>
+        <maml:description>
+          <maml:para>Defines the names of the columns. This is used to reference the column in the datatable.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+        <dev:type>
+          <maml:name>String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Caption</maml:name>
+        <maml:description>
+          <maml:para>Sets the caption of the column. This is used when creating table views.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>DefaultValue</maml:name>
+        <maml:description>
+          <maml:para>Sets the default value of a column. When set the cell of each row will get initialized with this default value.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Expression</maml:name>
+        <maml:description>
+          <maml:para>Sets a expression to calculate the cell value.</maml:para>
+          <maml:para>For more information about expression variables and syntax see microsoft docs https://docs.microsoft.com/en-us/dotnet/api/system.data.datacolumn.expression?view=net-5.0</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>AllowDBNull</maml:name>
+        <maml:description>
+          <maml:para>Defaults to true, if set to false column will not allow null values</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+        <dev:type>
+          <maml:name>Boolean</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>True</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <dev:code>Add-DataTableColumn -DataTable $DataTable -Names 'Firstname','Lastname','Address','Email'</dev:code>
+        <dev:remarks>
+          <maml:para>This example demostrates the use of multiple mode to create four columns in the DataTable object.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+        <dev:code>Add-DataTableColumn -DataTable $DataTable -Names 'PreferredColor' -Caption 'Preferred color' -DefaultValue 'Blue'</dev:code>
+        <dev:remarks>
+          <maml:para>This example demostrates the use of single mode to create one column with a caption and a default value.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 3 --------------------------</maml:title>
+        <dev:code>Add-DataTableColumn -DataTable $DataTable -Names 'Fee' -Expression '[Price] * [Amount]'</dev:code>
+        <dev:remarks>
+          <maml:para>This example demostrates the use of single mode to create one column with an expression</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Add-DataTableRow</command:name>
+      <command:verb>Add</command:verb>
+      <command:noun>DataTableRow</command:noun>
+      <maml:description>
+        <maml:para></maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Adds a row to a table row</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Add-DataTableRow</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>DataTable</maml:name>
+          <maml:description>
+            <maml:para>Pass the data table object to add rows to</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">DataTable</command:parameterValue>
+          <dev:type>
+            <maml:name>DataTable</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="2" aliases="none">
+          <maml:name>InputObject</maml:name>
+          <maml:description>
+            <maml:para>Provides an object array with objects thats  has properties corresponding to the table columns.  Note that the object can contain more properties  than columns, they will simply be ignored during  matching. On the other side, if the object is missing properties for all columns, the addition will fail.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
+          <dev:type>
+            <maml:name>Object[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>DataTable</maml:name>
+        <maml:description>
+          <maml:para>Pass the data table object to add rows to</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">DataTable</command:parameterValue>
+        <dev:type>
+          <maml:name>DataTable</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="2" aliases="none">
+        <maml:name>InputObject</maml:name>
+        <maml:description>
+          <maml:para>Provides an object array with objects thats  has properties corresponding to the table columns.  Note that the object can contain more properties  than columns, they will simply be ignored during  matching. On the other side, if the object is missing properties for all columns, the addition will fail.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
+        <dev:type>
+          <maml:name>Object[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <dev:code>Get-Service | Add-DataTableRow -DataTable $DataTable</dev:code>
+        <dev:remarks>
+          <maml:para>This example demonstrates how a preexisting object array can be passed to add rows.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+        <dev:code>$Object = [pscustomobject]@{</dev:code>
+        <dev:remarks>
+          <maml:para>Property1 = 'Value'     Property2 = 'Value'     Property3 = 'Value' } Add-DataTableRow -DataTable $DateTable -InputObject $Object</maml:para>
+          <maml:para>This example demonstrates how a single object can be passed to add a new row.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-DataTableRow</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>DataTableRow</command:noun>
+      <maml:description>
+        <maml:para></maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Retreive rows from DataTable</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-DataTableRow</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>DataTable</maml:name>
+          <maml:description>
+            <maml:para>Pass the data table object to get rows from</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">DataTable</command:parameterValue>
+          <dev:type>
+            <maml:name>DataTable</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="SQLQuery">
+          <maml:name>Query</maml:name>
+          <maml:description>
+            <maml:para>Define a query.</maml:para>
+            <maml:para>-like : like -gt   : &gt; -lt   : &lt; -eq   : =</maml:para>
+            <maml:para>Values should be enclosed with single qoutation marks Columns should not be enclosed with quotation marks</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>DataTable</maml:name>
+        <maml:description>
+          <maml:para>Pass the data table object to get rows from</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">DataTable</command:parameterValue>
+        <dev:type>
+          <maml:name>DataTable</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="SQLQuery">
+        <maml:name>Query</maml:name>
+        <maml:description>
+          <maml:para>Define a query.</maml:para>
+          <maml:para>-like : like -gt   : &gt; -lt   : &lt; -eq   : =</maml:para>
+          <maml:para>Values should be enclosed with single qoutation marks Columns should not be enclosed with quotation marks</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <dev:code>Get-DataTableRow -DataTable $DataTable -Query '[OrderID] = 123456789'</dev:code>
+        <dev:remarks>
+          <maml:para>This example demonstrates how to retreive rows from data table.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>New-DataSet</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>DataSet</command:noun>
+      <maml:description>
+        <maml:para></maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Creates a new dataset</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-DataSet</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <dev:code>$DataSet = New-DataSet</dev:code>
+        <dev:remarks>
+          <maml:para>This example demonstrates how to initialize a new data set object.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>New-DataTable</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>DataTable</command:noun>
+      <maml:description>
+        <maml:para></maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Creating a DataTable object</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-DataTable</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>TableName</maml:name>
+          <maml:description>
+            <maml:para>Defines the data table name. This property is used when referencing the table in a dataset for instance.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>TableName</maml:name>
+        <maml:description>
+          <maml:para>Defines the data table name. This property is used when referencing the table in a dataset for instance.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <dev:code>$OrderTable = New-DataTable -TableName 'Orders'</dev:code>
+        <dev:remarks>
+          <maml:para>This example will create a datatable and return the datatable object.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+</helpItems>
