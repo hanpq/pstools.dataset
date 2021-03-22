@@ -1,6 +1,6 @@
 ﻿@{
   RootModule = 'pstools.dataset.psm1'
-  ModuleVersion = '1.4'
+  ModuleVersion = '1.5'
   CompatiblePSEditions = @('Desktop','Core')
   GUID = 'a0e2a1b6-0a1d-4a6f-bf07-ff45a1d75e20'
   Author = 'Hannes Palmquist'
