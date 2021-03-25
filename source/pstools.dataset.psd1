@@ -1,6 +1,7 @@
-﻿@{
+﻿
+@{
   RootModule = 'pstools.dataset.psm1'
-  ModuleVersion = '1.5'
+  ModuleVersion = '1.5.1'
   CompatiblePSEditions = @('Desktop','Core')
   GUID = 'a0e2a1b6-0a1d-4a6f-bf07-ff45a1d75e20'
   Author = 'Hannes Palmquist'
@@ -13,7 +14,7 @@
   PrivateData = @{
     ModuleName = 'pstools.dataset'
     DateCreated = '2020-10-13'
-    LastBuildDate = '2021-03-23'
+    LastBuildDate = '2021-03-25'
     PSData = @{
       Tags = @('PSEdition_Desktop','PSEdition_Core','Windows','Linux','MacOS')
       ProjectUri = 'https://getps.dev/modules/pstools.dataset/quickstart'
