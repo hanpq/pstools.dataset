@@ -31,13 +31,12 @@ can be passed to add rows.
 ### EXAMPLE 2
 ```
 $Object = [pscustomobject]@{
-```
-
-Property1 = 'Value'
+    Property1 = 'Value'
     Property2 = 'Value'
     Property3 = 'Value'
 }
 Add-DataTableRow -DataTable $DateTable -InputObject $Object
+```
 
 This example demonstrates how a single object can be passed to add a new row.
 

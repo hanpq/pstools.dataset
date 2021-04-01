@@ -525,9 +525,13 @@
       </command:example>
       <command:example>
         <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
-        <dev:code>$Object = [pscustomobject]@{</dev:code>
+        <dev:code>$Object = [pscustomobject]@{
+    Property1 = 'Value'
+    Property2 = 'Value'
+    Property3 = 'Value'
+}
+Add-DataTableRow -DataTable $DateTable -InputObject $Object</dev:code>
         <dev:remarks>
-          <maml:para>Property1 = 'Value'     Property2 = 'Value'     Property3 = 'Value' } Add-DataTableRow -DataTable $DateTable -InputObject $Object</maml:para>
           <maml:para>This example demonstrates how a single object can be passed to add a new row.</maml:para>
         </dev:remarks>
       </command:example>
