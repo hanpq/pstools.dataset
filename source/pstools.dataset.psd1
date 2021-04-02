@@ -14,7 +14,7 @@
     PrivateData            = @{
         ModuleName    = 'pstools.dataset'
         DateCreated   = '2020-10-13'
-        LastBuildDate = '2021-04-01'
+        LastBuildDate = '2021-04-02'
         PSData        = @{
             Tags                       = @('PSEdition_Desktop', 'PSEdition_Core', 'Windows', 'Linux', 'MacOS')
             ProjectUri                 = 'https://getps.dev/modules/pstools.dataset/quickstart'
