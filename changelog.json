@@ -29,6 +29,16 @@
           "Message": "Removed signature on all script files due to certificate validation issue"
         }
       ]
+    },
+    {
+      "Version": "1.7.1",
+      "Date": "2021-04-03",
+      "Items": [
+        {
+          "Type": "fixed",
+          "Message": "Updated script functions with new psscriptinfo format"
+        }
+      ]
     }
   ]
 }

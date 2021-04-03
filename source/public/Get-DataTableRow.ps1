@@ -1,13 +1,15 @@
 ﻿<#PSScriptInfo
-    .VERSION 1.0.0.0
-    .GUID 6818cfc2-a6b6-47cd-bace-65ec64761930
-    .FILENAME Get-DataTableRow.ps1
-    .AUTHOR Hannes Palmquist
-    .AUTHOREMAIL hannes.palmquist@outlook.com
-    .CREATEDDATE 2020-10-13
-    .COMPANYNAME Personal
-    .COPYRIGHT (c) 2020, Hannes Palmquist, All Rights Reserved
-#>
+{
+  "VERSION": "1.0.0.0",
+  "GUID": "6818cfc2-a6b6-47cd-bace-65ec64761930",
+  "FILENAME": "Get-DataTableRow.ps1",
+  "AUTHOR": "Hannes Palmquist",
+  "AUTHOREMAIL": "hannes.palmquist@outlook.com",
+  "CREATEDDATE": "2020-10-13",
+  "COMPANYNAME": "Personal",
+  "COPYRIGHT": "(c) 2020, Hannes Palmquist, All Rights Reserved"
+}
+PSScriptInfo#>
 function Get-DataTableRow {
     <#
     .DESCRIPTION

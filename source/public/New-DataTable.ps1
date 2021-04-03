@@ -1,12 +1,14 @@
 ﻿<#PSScriptInfo
-    .VERSION 1.0.0.0
-    .GUID a0e2a1b6-0a1d-4a6f-bf07-ff45a1d75e20
-    .FILENAME New-DataTable.ps1
-    .AUTHOR Hannes Palmquist
-    .CREATEDDATE 2020-10-13
-    .COMPANYNAME 
-    .COPYRIGHT (c) 2020, Hannes Palmquist, All Rights Reserved
-#>
+{
+  "VERSION": "1.0.0.0",
+  "GUID": "a0e2a1b6-0a1d-4a6f-bf07-ff45a1d75e20",
+  "FILENAME": "New-DataTable.ps1",
+  "AUTHOR": "Hannes Palmquist",
+  "CREATEDDATE": "2020-10-13",
+  "COMPANYNAME": [],
+  "COPYRIGHT": "(c) 2020, Hannes Palmquist, All Rights Reserved"
+}
+PSScriptInfo#>
 function New-DataTable {
     <#
     .DESCRIPTION

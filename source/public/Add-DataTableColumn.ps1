@@ -1,13 +1,15 @@
 ﻿<#PSScriptInfo
-    .VERSION 1.0.0.0
-    .GUID 6197517b-5bf1-4bf4-b978-09993773da76
-    .FILENAME Add-DataTableColumn.ps1
-    .AUTHOR Hannes Palmquist
-    .AUTHOREMAIL hannes.palmquist@outlook.com
-    .CREATEDDATE 2020-10-13
-    .COMPANYNAME Personal
-    .COPYRIGHT (c) 2020, Hannes Palmquist, All Rights Reserved
-#>
+{
+  "VERSION": "1.0.0.0",
+  "GUID": "6197517b-5bf1-4bf4-b978-09993773da76",
+  "FILENAME": "Add-DataTableColumn.ps1",
+  "AUTHOR": "Hannes Palmquist",
+  "AUTHOREMAIL": "hannes.palmquist@outlook.com",
+  "CREATEDDATE": "2020-10-13",
+  "COMPANYNAME": "Personal",
+  "COPYRIGHT": "(c) 2020, Hannes Palmquist, All Rights Reserved"
+}
+PSScriptInfo#>
 function Add-DataTableColumn {
     <#
     .DESCRIPTION
