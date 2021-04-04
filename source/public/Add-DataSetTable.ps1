@@ -1,13 +1,13 @@
 ﻿<#PSScriptInfo
 {
-  "VERSION": "1.0.0.0",
-  "GUID": "995b18ed-ea8c-4544-b2a6-bf7a06fdab93",
-  "FILENAME": "Add-DataSetTable.ps1",
-  "AUTHOR": "Hannes Palmquist",
-  "AUTHOREMAIL": "hannes.palmquist@outlook.com",
-  "CREATEDDATE": "2020-10-14",
-  "COMPANYNAME": "Personal",
-  "COPYRIGHT": "(c) 2020, Hannes Palmquist, All Rights Reserved"
+    "VERSION":  "1.0.0.0",
+    "GUID":  "995b18ed-ea8c-4544-b2a6-bf7a06fdab93",
+    "FILENAME":  "Add-DataSetTable.ps1",
+    "AUTHOR":  "Hannes Palmquist",
+    "AUTHOREMAIL":  "hannes.palmquist@outlook.com",
+    "CREATEDDATE":  "2020-10-14",
+    "COMPANYNAME":  "Personal",
+    "COPYRIGHT":  "(c) 2020, Hannes Palmquist, All Rights Reserved"
 }
 PSScriptInfo#>
 function Add-DataSetTable {

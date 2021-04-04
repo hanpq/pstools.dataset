@@ -1,5 +1,4 @@
-
-@{
+﻿@{
   RootModule = 'pstools.dataset.psm1'
   ModuleVersion = '1.7.1'
   CompatiblePSEditions = @('Desktop','Core')
@@ -46,7 +45,6 @@
   CLRVersion = ''
   ProcessorArchitecture = ''
 }
-
 
 
 

@@ -1,13 +1,13 @@
 ﻿<#PSScriptInfo
 {
-  "VERSION": "1.0.0.0",
-  "GUID": "b4a4b5b4-9c01-422a-8c9f-29449413ec80",
-  "FILENAME": "Add-DataSetRelation.ps1",
-  "AUTHOR": "Hannes Palmquist",
-  "AUTHOREMAIL": "hannes.palmquist@outlook.com",
-  "CREATEDDATE": "2020-10-30",
-  "COMPANYNAME": "Personal",
-  "COPYRIGHT": "(c) 2020, Hannes Palmquist, All Rights Reserved"
+    "VERSION":  "1.0.0.0",
+    "GUID":  "b4a4b5b4-9c01-422a-8c9f-29449413ec80",
+    "FILENAME":  "Add-DataSetRelation.ps1",
+    "AUTHOR":  "Hannes Palmquist",
+    "AUTHOREMAIL":  "hannes.palmquist@outlook.com",
+    "CREATEDDATE":  "2020-10-30",
+    "COMPANYNAME":  "Personal",
+    "COPYRIGHT":  "(c) 2020, Hannes Palmquist, All Rights Reserved"
 }
 PSScriptInfo#>
 function Add-DataSetRelation {

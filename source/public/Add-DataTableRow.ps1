@@ -1,13 +1,13 @@
 ﻿<#PSScriptInfo
 {
-  "VERSION": "1.0.0.0",
-  "GUID": "4ab19fe0-a59e-43d7-aea8-b098a470321d",
-  "FILENAME": "Add-DataTableRow.ps1",
-  "AUTHOR": "Hannes Palmquist",
-  "AUTHOREMAIL": "hannes.palmquist@outlook.com",
-  "CREATEDDATE": "2020-10-13",
-  "COMPANYNAME": "Personal",
-  "COPYRIGHT": "(c) 2020, Hannes Palmquist, All Rights Reserved"
+    "VERSION":  "1.0.0.0",
+    "GUID":  "4ab19fe0-a59e-43d7-aea8-b098a470321d",
+    "FILENAME":  "Add-DataTableRow.ps1",
+    "AUTHOR":  "Hannes Palmquist",
+    "AUTHOREMAIL":  "hannes.palmquist@outlook.com",
+    "CREATEDDATE":  "2020-10-13",
+    "COMPANYNAME":  "Personal",
+    "COPYRIGHT":  "(c) 2020, Hannes Palmquist, All Rights Reserved"
 }
 PSScriptInfo#>
 function Add-DataTableRow {
